@@ -1,0 +1,48 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="author"      content="Ignasi Ortiz, Carlos Leichner, Gabriel Farrus" />
+	<meta name="description" content="IT Academy - FullStack LAMP" />
+    <title>PhP Developers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <hijo class="flex justify-center items-center bg-gray-300 text-center w-full">        
+    <form action="" method="POST" class="flex justify-center ">
+      <section class="flex justify-center items-center bg-gray-300 text-center w-full">
+        <div class="max-w-md w-full bg-white rounded p-6 my-4 space-y-4">              
+          <span class="block text-3xl font-bold text-pink-500">Menú opcions de Tasques</span>
+            <div class="flex-col flex items-center justify-evenly ">
+              <button type = "submit" 
+                      id   = "btnAddtask" 
+                      name = "btnAddtask" 
+                      class= "my-4 w-40 py-4 bg-gray-600 hover:bg-gray-400 rounded text-sm font-bold text-pink-600 border-pink-600 transition duration-200">
+                <a href="addtask" class =" text-white underline hover:no-underline no-underline text-white-600 border-pink-600 transition duration-200 hover:text-white-600" >Nova tasca</a>
+              </button>
+              <button type = "submit" 
+                      id   = "btnSearchtask" 
+                      name = "btnSearchtask"
+                      class= "my-4 w-40 py-4 bg-gray-600 hover:bg-gray-400 rounded text-sm font-bold text-white-50 transition duration-200">
+                <a href="searchtask" class ="text-white underline hover:no-underline no-underline text-white-600 border-pink-600 transition duration-200 hover:text-white-600" >Buscar per ID</a>
+              </button>
+              <button type = "submit" 
+                      id   = "btnViewtask" 
+                      name = "btnViewtask" class="my-4 w-40 py-4 bg-gray-600 hover:bg-gray-400 rounded text-sm font-bold text-white-50 transition duration-200">
+                <a href="viewalltask" class ="text-white underline hover:no-underline no-underline text-white-600 border-pink-600 transition duration-200 hover:text-white-600" >Llistar totes</a>
+              </button>
+              <button type = "submit" 
+                      id   = "btnDeltask" 
+                      name = "btnDeltask" 
+                      class="my-4  w-40 py-4 bg-gray-600 hover:bg-gray-400 rounded text-sm font-bold text-white-600 border-pink-600 transition duration-200">
+                <a href="searchtodeletetask" class ="text-white underline hover:no-underline no-underline text-white-600 border-pink-600 transition duration-200 hover:text-white-600" >Eliminar per ID</a>
+              </button>
+            </div> 
+          </div>                            
+        </div>
+      </section>
+    </form>
+  </hijo>
+</body>

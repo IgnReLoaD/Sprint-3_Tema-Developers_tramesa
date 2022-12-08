@@ -1,0 +1,138 @@
+<?php include ROOT_PATH.'/web/includes/header.php';
+$controller = new TaskController;
+$tasks = $controller->viewallAction();
+// var_dump($tasks);
+?>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="author"      content="Ignasi Ortiz, Carlos Leichner, Gabriel Farrus" />
+	  <meta name="description" content="IT Academy - FullStack LAMP" />
+    <title>PhP Developers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <nav method = "POST" class="flex justify-center space-x-4">
+        
+        
+        <a href="listtask" class="font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">Tasks</a>
+        
+      </nav>
+    
+    
+    <form action ="" method = "POST" class="flex justify-center items-center bg-gray-300 ">
+        
+    <div class="pt-6 bg-white container flex justify-center mx-auto">
+    <div class="flex flex-col">
+        <div class="w-full">
+            <div class="border-b border-gray-200 shadow">
+                <table class="divide-y divide-gray-300 ">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-2 text-xs text-gray-500">
+                                ID
+                            </th>
+                            <th  class="px-6 py-2 text-xs text-gray-500">
+                                Description
+                            </th>
+                            <th class="px-6 py-2 text-xs text-gray-500">
+                                Status
+                            </th>
+                            <th class="px-6 py-2 text-xs text-gray-500">
+                                Created At
+                            </th>
+                            <th  class="px-6 py-2 text-xs text-gray-500">
+                                Finish
+                            </th>
+                            <th class="px-6 py-2 text-xs text-gray-500">
+                                Master User
+                            </th>
+                            <th class="px-6 py-2 text-xs text-gray-500">
+                                Slave User
+                            </th>
+                            <th class="px-6 py-2 text-xs text-gray-500">
+                                Edit
+                            </th>
+                            <th class="px-6 py-2 text-xs text-gray-500">
+                                Delete
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-300">
+                        <?php 
+                        
+                        foreach ($tasks as $key => $task) :?>
+                        <tr class="whitespace-nowrap">
+                            <td id = 'id_task' class="px-6 py-4 text-sm text-gray-500">
+                                <?php echo $task['id_task']?>
+                            </td>
+                            <td id = 'description' class="px-6 py-4">
+                                <div class="text-sm text-gray-900">
+                                <?php echo $task['description']?>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div id = 'currentStatus' class="text-sm text-gray-500">
+                                <?php echo $task['currentStatus']?>
+                                </div>
+                            </td>
+                            <td id = 'created_at' class="px-6 py-4 text-sm text-gray-500">
+                                <?php echo $task['created_at']?>
+                            </td>
+                            <td id = 'done' class="px-6 py-4 text-sm text-gray-500">
+                                <?php echo $task['done']?>
+                            </td>
+                            <td id = 'masterUsr_id' class="px-6 py-4 text-sm text-gray-500">
+                                <?php echo $task['masterUsr_id']?>
+                            </td>
+                            <td id = 'slaveUsr_id ' class="px-6 py-4 text-sm text-gray-500">
+                                <?php echo $task['slaveUsr_id']?>
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="edittask?id_task=<?php echo $task['id_task']?>">
+                                    <svg  class="w-6 h-6 text-blue-400" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                    </svg>
+                                </a>
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="deltask?id_task=<?php echo $task['id_task']?>">
+                                    <svg  class="w-6 h-6 text-red-400" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <?php endforeach;;?>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <madre method = "POST" class="p-20 m-20 px-20 flex items-center justify-between">
+
+                    <button type= "submit" id = "addtask" name = "addtask" class="w-40 py-4 bg-pink-600 hover:bg-pink-800 rounded text-sm font-bold text-gray-50 transition duration-200" >
+                    <a href="addtask" class =" underline hover:no-underline no-underline text-white" >Create Task </a>
+                        </button>
+                        <button type = "submit" id= "cancel" name ="cancel"  class="w-40 py-4 bg-gray-300 hover:bg-gray-400 rounded text-sm font-bold text-pink-600 border-pink-600 transition duration-200">
+                        <a href="listtask" class =" underline hover:no-underline no-underline text-pink-600 border-pink-600 transition duration-200 hover:text-pink-600" >Back</a>
+                    </button>
+
+            </madre>
+        </div>
+    </div>
+</div>
+    
+</form>
+</body>
+<?php
+include ROOT_PATH.'/web/includes/footer.php';?>
+   </html>
+      
+      

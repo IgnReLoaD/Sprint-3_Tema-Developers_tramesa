@@ -1,0 +1,95 @@
+<?php include ROOT_PATH.'/web/includes/header.php';?>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="author"      content="Ignasi Ortiz, Carlos Leichner, Gabriel Farrus" />
+	  <meta name="description" content="IT Academy - FullStack LAMP" />
+    <title>PhP Developers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <nav method = "POST" class="flex justify-center space-x-4">
+        
+        
+    <H1>CREATE TASK</H1>        
+      </nav>
+    
+    
+      <form action = "viewtask" method = "POST" class="flex justify-center ">
+      <section class="flex justify-center items-center bg-gray-300 text-center w-full ">
+          <div class="max-w-md w-full  bg-white rounded p-6 my-4 space-y-4">
+          
+          <span class=" block text-sm font-medium text-slate-700">Task Description:</span>
+          <input type="text" id ="description" name ="description" class="mt-1  px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+            focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+            disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+            invalid:border-pink-500 invalid:text-pink-600
+            focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+          "/>
+          <span class=" block text-sm font-medium text-slate-700">Creator User:</span>
+          <input type="text" id ="masterUsr_id" name="masterUsr_id" class="mt-1  px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+            focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+            disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+            invalid:border-pink-500 invalid:text-pink-600
+            focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+          "/>
+          <span class=" block text-sm font-medium text-slate-700">User:</span>
+          <input type="text" id ="slaveUsr_id" name="slaveUsr_id" class="mt-1  px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+            focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+            disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+            invalid:border-pink-500 invalid:text-pink-600
+            focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+          "/>
+          <span class=" block text-sm font-medium text-slate-700">Expedition Date:</span>
+          <input type="date" id="created_at" name="created_at" class="mt-1  px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+            focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+            disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+            invalid:border-pink-500 invalid:text-pink-600
+            focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+          "/>
+          <span class=" block text-sm font-medium text-slate-700">Finish Date:</span>
+          <input type="date" id="done" name="done" class="mt-1  px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+            focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+            disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+            invalid:border-pink-500 invalid:text-pink-600
+            focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+          "/>
+          <span class=" block text-center text-sm font-medium text-slate-700  ">Status</span>
+
+            <div id= "currentStatus" class="max-w-md w-full  bg-white rounded p-6 my-4 space-y-4">
+              <select id= "currentStatus"  class=" block appearance-none w-full bg-white-200 border border-slate-300 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-center">
+                <option>Initiated</option>
+                <option>In Progress</option>
+                <option>Completed</option>
+                <option>Deleted</option>
+              </select>
+              
+            
+          </div>
+          
+          <div class = "flex items-center justify-evenly">
+        <button type= "submit" id = "addtask" name = "addtask" class="w-40 py-4 bg-pink-600 hover:bg-pink-800 rounded text-sm font-bold text-gray-50 transition duration-200">
+          Create
+          </button>
+          <button type = "submit" id= "cancel" name ="cancel" class="w-40 py-4 bg-gray-300 hover:bg-gray-400 rounded text-sm font-bold text-pink-600 border-pink-600 transition duration-200">
+          <a href="listtask" class =" underline hover:no-underline no-underline text-pink-600 border-pink-600 transition duration-200 hover:text-pink-600" >Back</a>
+        </button>
+        </div>
+      </div>
+      </section>
+        
+        
+      
+        
+        
+    </form>
+      
+  </body>
+  <?php
+include ROOT_PATH.'/web/includes/footer.php';?>
+</html>
+      
+      

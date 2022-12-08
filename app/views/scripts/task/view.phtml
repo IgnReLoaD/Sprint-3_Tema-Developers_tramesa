@@ -1,0 +1,119 @@
+<?php include ROOT_PATH.'/web/includes/header.php';
+// $controller = new TaskController;
+// //$search = $controller->searchAction();
+
+// $taskid = $_GET['id_task'];
+
+//  $tasks = $controller->viewallAction();
+// foreach ($tasks as $key => $value) {
+//   if ($value['id_task']== $taskid) {
+//     echo $$value;
+//   }
+// }
+// print_r($taskid);
+
+
+?>
+<head>
+    <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+      <meta name="author"      content="Ignasi Ortiz, Carlos Leichner, Gabriel Farrus" />
+      <meta name="description" content="IT Academy - FullStack LAMP" />
+      <title>PhP Developers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+      
+      <nav  class="flex justify-center space-x-4">
+          
+          
+      <H1>VIEW TASK  </H1>
+          
+        </nav>
+      
+      
+        <form  action ="edittask" method = "POST" class="flex justify-center bg-gray-300 ">
+            <section class="text-center w-fit px-8 py-8 bg-white rounded  my-4 space-y-4 flex items-center justify-center">
+              <div class="mb-4 ">
+            <span class=" block text-sm font-medium text-slate-700">ID Task:</span>
+            <!-- Using form state modifers, the classes can be identical for every input -->
+            <input type="text" value="<?php echo $_POST['id_task']?>" name="id_task"disabled class="mt-1  px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+              focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+              disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+              invalid:border-pink-500 invalid:text-pink-600
+              focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+            "/>
+            <span class=" block text-sm font-medium text-slate-700">Task Description:</span>
+            <!-- Using form state modifers, the classes can be identical for every input -->
+            <input type="text" value="<?php echo $_POST['description']?>" name ="description" disabled class="mt-1  px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+              focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+              disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+              invalid:border-pink-500 invalid:text-pink-600
+              focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+            "/>
+            <span class=" block text-sm font-medium text-slate-700">Creator User:</span>
+            <!-- Using form state modifers, the classes can be identical for every input -->
+            <input type="text" value="<?php echo $_POST['masterUsr_id']?>" name="masterUsr_id" disabled class="mt-1  px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+              focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+              disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+              invalid:border-pink-500 invalid:text-pink-600
+              focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+            "/>
+            <span class=" block text-sm font-medium text-slate-700">User:</span>
+            <!-- Using form state modifers, the classes can be identical for every input -->
+            <input type="text" value="<?php echo $_POST['slaveUsr_id']?>" name="slaveUsr_id" disabled class="mt-1  px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+              focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+              disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+              invalid:border-pink-500 invalid:text-pink-600
+              focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+            "/>
+            <span class=" block text-sm font-medium text-slate-700">Status:</span>
+            <!-- Using form state modifers, the classes can be identical for every input -->
+            <input type="text" value="<?php echo $_POST['currentStatus']?>" name="currentStatus" disabled class="mt-1  px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+              focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+              disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+              invalid:border-pink-500 invalid:text-pink-600
+              focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+            "/>
+            <span class=" block text-sm font-medium text-slate-700">Expedition Date:</span>
+            <!-- Using form state modifers, the classes can be identical for every input -->
+            <input type="text" value="<?php echo $_POST['created_at']?>" name="created_at"disabled class="mt-1  px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+              focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+              disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+              invalid:border-pink-500 invalid:text-pink-600
+              focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+            "/>
+            
+            <span class=" block text-sm font-medium text-slate-700">Finish Date:</span>
+            <!-- Using form state modifers, the classes can be identical for every input -->
+            <input type="text" value="<?php echo $_POST['done']?>" name="done" disabled class="mt-1  px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+              focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+              disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+              invalid:border-pink-500 invalid:text-pink-600
+              focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+            "/>
+            <div class=" pt-4 flex items-center justify-between">
+            <button class="w-1/2 py-4 bg-pink-600 hover:bg-pink-800 rounded text-sm font-bold text-gray-50 transition duration-200" type="submit">
+              Modify
+            </button>
+            <button class="w-1/2 py-4 bg-gray-300 hover:bg-gray-400 rounded text-sm font-bold text-pink-600 border-pink-600 transition duration-200" type="submit">
+            <a href="listtask" class =" underline hover:no-underline no-underline text-pink-600 border-pink-600 transition duration-200 hover:text-pink-600" >Back</a>
+            </button>
+          </div>
+              </div>
+              
+</section>
+          
+          
+         
+      </form>
+  </body>    
+  <?php 
+  if (isset($_POST['id_Ysdk'])){
+   echo '<a class="text-sm text-red-600 hover:underline" href="adduser">Usuari no trobat. Vols registrar-te?</a>';
+   }
+                      
+include ROOT_PATH.'/web/includes/footer.php';?>
+  
+     </html>

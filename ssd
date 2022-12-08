@@ -1,0 +1,29 @@
+[33mcommit 70a70569afd318d4400b9d89935702bfa6254853[m[33m ([m[1;36mHEAD -> [m[1;32mig-dev[m[33m)[m
+Author: IgnReLoaD <ortiz.ignasi@gmail.com>
+Date:   Fri Nov 11 11:16:33 2022 +0100
+
+    Persistencia de datos: Nivel-1.JSON
+
+[33mcommit cd92c51a5a0e54a76e417675a76afcf402514d1f[m[33m ([m[1;31morigin/ig-dev[m[33m)[m
+Author: IgnReLoaD <ortiz.ignasi@gmail.com>
+Date:   Thu Nov 10 15:57:38 2022 +0100
+
+    Documentation: requirements, wireframes, mockups.
+
+[33mcommit 2feb3ce490aeb6efb6310f772322ce45e3d2f7c7[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Carlos Leichner <111971624+CarlosLeichner@users.noreply.github.com>
+Date:   Thu Nov 10 12:01:23 2022 +0100
+
+    Delete nivel1_2_3.php
+
+[33mcommit 5efa803b95f9f73ea09d8699ee33a49045ebe164[m
+Author: Carlos Leichner <111971624+CarlosLeichner@users.noreply.github.com>
+Date:   Thu Nov 10 11:06:52 2022 +0100
+
+    ejemplo
+
+[33mcommit 5be7d87e29b5790a0c06b195837aa6c43df8d4be[m[33m ([m[1;31morigin/ga_dev[m[33m, [m[1;31morigin/dev[m[33m)[m
+Author: Carlos Leichner <carlosleichner@gmail.com>
+Date:   Thu Nov 10 10:51:24 2022 +0100
+
+    plantilla developers

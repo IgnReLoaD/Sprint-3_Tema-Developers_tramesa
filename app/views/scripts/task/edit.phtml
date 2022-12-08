@@ -1,0 +1,82 @@
+<?php include ROOT_PATH.'/web/includes/header.php';?>
+
+-->
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="author"      content="Ignasi Ortiz, Carlos Leichner, Gabriel Farrus" />
+	<meta name="description" content="IT Academy - FullStack LAMP" />
+    <title>PhP Developers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<nav method = "POST" class="flex justify-center space-x-4">
+        
+        
+        <h1>EDIT TASK</h1> 
+        
+      </nav>
+
+
+<form action = "viewtask" method = "POST" class="flex justify-center ">
+        
+<section class="flex justify-center items-center bg-gray-300 text-center w-full ">
+          <div class="max-w-md w-full  bg-white rounded p-6 my-4 space-y-4">
+             <label class=" block text-sm font-medium text-slate-700" for="user">
+               User
+             </label>
+             <input type="text" value="" id= "user" class="justify-center shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  >
+             <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+           
+             <label class=" block text-sm font-medium text-slate-700" for="description">
+               Task Description
+             </label>
+             <input type="text" value="" name ="description" id = "description" class="justify-center shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  >
+           
+             <label for="crated_at" class=" block text-sm font-medium text-slate-700">Created date</label>
+             <input type="date" value="" name="created_at" id= "created_at"
+               class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+               placeholder="Select a date" />
+           
+           
+             <label for="done" class=" block text-sm font-medium text-slate-700">Finish date</label>
+             <input type="date" value="" name="done" id= "done"
+               class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+               placeholder="Select a date" />
+           
+           
+            
+             <label class=" block text-sm font-medium text-slate-700" for="grid-status">
+               Status
+             </label>
+             
+               <select class=" flex items-center justify-center block appearance-none w-1/2 bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="currentStatus">
+                 <option>Initiated</option>
+                 <option>In Progress</option>
+                 <option>Completed</option>
+                 <option>Deleted</option>
+               </select>
+               
+             
+           
+         <div class = "flex items-center justify-evenly">
+           <button type= "submit" name = "viewtask" class="w-40 py-4 bg-pink-600 hover:bg-pink-800 rounded text-sm font-bold text-gray-50 transition duration-200" >
+           
+             <!-- <a href="../web/viewtask"></a> -->Continue
+           </button>
+ 
+           <button type = "submit" id= "cancel" name ="cancel" class="w-40 py-4 bg-gray-300 hover:bg-gray-400 rounded text-sm font-bold text-pink-600 border-pink-600 transition duration-200" >
+           <a href="listtask" class =" underline hover:no-underline no-underline text-pink-600 border-pink-600 transition duration-200 hover:text-pink-600" >Back</a>
+           </button>
+         </div>
+          </div>
+         
+        </section>
+ 
+       </form>
+        </body>
+ <?php
+ include ROOT_PATH.'/web/includes/footer.php';?>
+ </html>

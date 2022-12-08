@@ -1,0 +1,60 @@
+<?php include ROOT_PATH.'/web/includes/header.php';
+
+// $controller = new TaskController;
+// $search = $controller->searchAction();
+// foreach ($tasks as $key => $task) {
+//   $taskid = $task['id_task'];
+// }
+
+
+
+?>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="author"      content="Ignasi Ortiz, Carlos Leichner, Gabriel Farrus" />
+	<meta name="description" content="IT Academy - FullStack LAMP" />
+    <title>PhP Developers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+  <body>  
+  <nav  class="flex justify-center space-x-4">
+          
+          
+          <H1>SEARCH TASK</H1>
+          
+        </nav>    
+      
+      <form id ="viewtask" action = "viewtask"  method = "POST">
+      <!-- <form id ="listtask" action = "listtask"  method = "GET"> -->
+      <section class="flex justify-center items-center bg-gray-300">
+          <div class="max-w-md w-full  bg-white rounded p-6 my-4 space-y-4">
+            <label for = 'id_task' class="block flex justify-center text-gray-700 text-sm font-bold mb-2" >
+              Id Task
+            </label>
+            
+            <input name ='id_task' id= 'id_task' class="justify-center shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text">
+          <div class="flex items-center justify-evenly">
+          
+            <button  type= "submit"  class="w-40 py-4 bg-pink-600 hover:bg-pink-800 rounded text-sm font-bold text-gray-50 transition duration-200" >
+            <!-- <a href="viewtask"></a> -->View Task
+            </button>
+            
+            <button action ="listtask" type = "submit" id= "cancel"  class="w-40 py-4 bg-gray-300 hover:bg-gray-400 rounded text-sm font-bold text-pink-600 border-pink-600 transition duration-200">
+
+            <a href="listtask" class =" underline hover:no-underline no-underline text-pink-600 border-pink-600 transition duration-200 hover:text-pink-600" >Back</a>
+            </button>
+          </div>
+      </section>
+        
+          
+      </form>
+  
+</div>
+     
+<?php
+include ROOT_PATH.'/web/includes/footer.php';?>
+   </html>
+   

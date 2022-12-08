@@ -1,0 +1,71 @@
+
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="author"      content="Ignasi Ortiz, Carlos Leichner, Gabriel Farrus" />
+	<meta name="description" content="IT Academy - FullStack LAMP" />
+    <title>PhP Developers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+    <form id="frmEditUser" action="" method="post">
+        <section class="flex justify-center items-center h-full bg-gray-300">
+          <div class="max-w-md w-full bg-white rounded p-6 my-4 space-y-4">
+              <div class="mb-4">
+                  <p class="text-gray-600">Fes-te membre de la:</p>
+                  <h2 class="text-xl text-pink-600 font-bold">IT-ACADEMY Developers Team v2.0</h2>
+              </div>
+              <div>
+                  <label for  ="inpName">Nom:</label>
+                  <input type ="text" 
+                         id   ="inpName"
+                         name ="inpName" 
+                         placeholder="Name"
+                         class="w-full p-4 text-sm bg-gray-50 focus:outline-none focus:bg-yellow-100 border-2 border-gray-400 rounded text-gray-600">
+              </div>
+              <div>
+                  <label for  ="inpCog">Cognom:</label>
+                  <input type ="text" 
+                         id   ="inpCog"
+                         name ="inpCog" 
+                         placeholder="Surname"
+                         class="w-full p-4 text-sm bg-gray-50 focus:outline-none focus:bg-yellow-100 border-2 border-gray-400 rounded text-gray-600">
+              </div>
+              <div>
+                  <label for  ="inpRol">Rol:</label>
+                  <input type ="text" 
+                         id   ="inpRol"
+                         name ="inpRol"
+                         placeholder="Rol (boss, manager, office)"
+                         class="w-full p-4 text-sm bg-gray-50 focus:outline-none focus:bg-yellow-100 border-2 border-gray-400 rounded text-gray-600">
+              </div>              
+              <div>
+                  <label for  ="inpPwd">Password:</label>
+                  <input type ="password" 
+                         id   ="inpPwd"
+                         name ="inpPwd"
+                         placeholder="Password"
+                         class="w-full p-4 text-sm bg-gray-50 focus:outline-none focus:bg-yellow-100 border-2 border-gray-400 rounded text-gray-600">
+              </div>
+              <div>
+                  <button type ="submit"  
+                          id   ="btnLogin" 
+                          name ="btnLogin"
+                          value="Registrar"
+                          form ="frmEditUser" 
+                          class="w-full py-4 bg-pink-600 hover:bg-pink-800 rounded text-sm font-bold text-gray-50 transition duration-200">Registrar</button>
+              </div>
+              <div>
+                  <button type ="cancel"  
+                          id   ="btnCancel" 
+                          name ="btnCancel"
+                          value="Cancel·lar"
+                          form ="frmEditUser" 
+                          class="w-full py-4 bg-gray-300 hover:bg-gray-400 rounded text-sm font-bold text-pink-600 border-pink-600 transition duration-200">
+                          <a href="index" class =" underline hover:no-underline no-underline text-pink-600 border-pink-600 transition duration-200 hover:text-pink-600" >Cancel·lar</a></button>
+                        </div>
+              <!-- <div class="flex items-center justify-between">                                
+              </div> -->
+          </div>
+        </section>
+    </form>      
